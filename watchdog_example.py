@@ -12,7 +12,7 @@ from watchdog.events import LoggingEventHandler, FileSystemEventHandler
 
 
 def build_json_message(message_type, path):
-    message = {'message_type': message_type, 'path': path}
+    message = {'message_type': message_type, 'path': path, 'user' : 'ripley'}
     return json.dumps(message)
 
 class Watchmen(FileSystemEventHandler):
